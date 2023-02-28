@@ -43,7 +43,7 @@ Test:
  - http://localhost:19991/metrics?target=10.0.0.9
 
 For quick tests, you can also run exporter in a text mode. For example:
-`./shelly.py --targets=10.0.0.8,10.0.0.9 --once`
+`./shelly.py --default_targets=10.0.0.8,10.0.0.9 --once`
 
 Once you are happy with test results, configure your Prometheus.
 
@@ -115,3 +115,5 @@ TODO
 - Use `urllib3` or `http.client` directly instead of `requests`
 - Resolve shelly bug 23769, causing 2PM Pro to reboot every few
   hours or days, depending on frequency of scrapes.
+- When scraping multiple shellies (using multiple target arguments),
+  metrics are not sorted optimally.
