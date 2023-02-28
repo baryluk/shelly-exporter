@@ -117,3 +117,4 @@ TODO
   hours or days, depending on frequency of scrapes.
 - When scraping multiple shellies (using multiple target arguments),
   metrics are not sorted optimally.
+- `standard_metrics` function is very Linux-specific

@@ -152,6 +152,9 @@ clock_tick = 100
 start_time = time.time()
 
 
+# This is super ugly, and works only on Linux (and maybe some BSDs).
+# On Windows it will throw, which is fine. These metrics are nice
+# to have but not critical.
 def standard_metrics(file):
     try:
         with open("/proc/self/stat") as f:
